@@ -5,6 +5,8 @@
     font-size: 16px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    transition:  0.5s ease;
+    -moz-transition: 0.5s ease;
 }
 
 .secondary{
@@ -15,8 +17,9 @@
 }
 
 .avatarDiv{
-    background-color: rgb(30, 34, 58);
+    background-color: rgb(28, 31, 51);
     position: sticky;
+    top: 0;
 
    
 }
@@ -36,6 +39,12 @@
     font-size: 14px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    
+}
+
+.primary:hover{
+    color:rgb(255, 200, 21);
+    
 }
 
 .subSecondary{
@@ -45,3 +54,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.status{
+    position: absolute;
+    right: 100px;
+    top: 67px;
+
+}
+
+.footerStyle{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background: rgb(28, 31, 51);;
+    margin-top: 1px;
+
+}
