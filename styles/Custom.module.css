@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
 .mt5{
     margin-top: 5px;
 }
@@ -129,4 +131,35 @@ position: relative;
   align-items: center;
   align-content: center;
 	  
+}
+
+.ml3{
+	margin-left: 3rem;
+}
+
+.title{
+	font-size: 4rem;
+	font-family: Poppins;
+	font-weight: bold;
+	margin: 3rem;
+}
+
+.hat{
+
+		position: absolute;
+		
+		transform: translate(-10px,-12px);
+}
+
+.educationlist{
+    display: flex;
+justify-content: center;
+}
+.educationBox{
+    width: 50%;
+}
+
+.work{
+	position: absolute;
+	transform: translate(0px,-24px);
 }

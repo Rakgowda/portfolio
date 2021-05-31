@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
 .title{
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   /* font-family: 'Goblin One', cursive; */
 }
@@ -70,3 +70,10 @@
     }
   }
   
+
+  .description{
+    position: absolute;
+    font-size: 2rem;
+    z-index: -2;
+    top: 20rem;
+  }

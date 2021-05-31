@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.headerTitle{
+
+display: inline-block;
+left: 50%;
+position: relative;
+transform: translateX(-50%);
+top: -28px;
+background-color: rgb(28, 31, 51);
+color: rgb(255, 200, 21);
+}
+
+
+.footerTitle{
+
+    left: 50%;
+position: relative;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+bottom: -28px;
+background-color: rgb(28, 31, 51);
+text-align: center;
+display: flex;
+width: max-content;
+color: rgb(255, 200, 21);
+
+    }
+    .container {
+        height: 100%;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+      }
+      .item {
+        flex: 1 0 auto;
+margin: 7px;
+/* border: 1px solid red; */
+font-family: Poppins;
+font-weight: bold;
+font-size: 1.2rem;
+/* text-decoration: underline; */
+      }
+
+.imageGrid{
+    width: 75%;
+height: 100%;
+left: 25%;
+position: relative;
+}
+
