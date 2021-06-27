@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import NProgress from 'nprogress'; //nprogress module
-import 'nprogress/nprogress.css'; //styles of nprogress
+// import 'nprogress/nprogress.css'; //styles of nprogress
 import Router from 'next/router';
 
 //Binding events. 
