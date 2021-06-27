@@ -77,6 +77,14 @@ opacity: .3;
 position: relative;
 }
 
+.primarybackgroud
+{
+	background: rgb(255, 200, 21);
+	color: black;
+
+
+}
+
 .readytoWork {
 	background: rgb(255, 200, 21);
 	border-radius: 50%;
@@ -107,7 +115,7 @@ position: relative;
 }
 
 .darkBackground{
-	background-color: rgb(30, 34, 58,.5);
+	background-color: #1c1f33;
 }
 
 .fontSize13{
