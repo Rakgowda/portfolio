@@ -1,0 +1,19 @@
+{
+  "name": "rakshithgowdakv",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "next": "10.2.0",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-tooltip": "^4.2.18"
+  }
+}
