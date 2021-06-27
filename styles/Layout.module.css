@@ -1,0 +1,52 @@
+.divBc{
+    /* border:1px solid red; */
+
+}
+.ml{
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.mr-1{
+    margin-right: 1px;
+}
+
+.dark{
+    background-color: rgb(51, 55, 78);
+    color: white;
+
+}
+
+.stickyLeftNav{
+    overflow-y: scroll;
+/* padding: 20px; */
+position: absolute;
+/* top: 5px; */
+height: 100%;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.stickyLeftNav::-webkit-scrollbar {
+    display: none;
+}
+
+.rightNav{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    /* top: 5px; */
+}
+
+.centerScreen{
+    position: absolute;
+    left: 25%;
+    /* top: 5px; */
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+.centerScreen::-webkit-scrollbar {
+    display: none;
+}
