@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+.title{
+  font-size: 3.5rem;
+  font-weight: bold;
+  /* font-family: 'Goblin One', cursive; */
+}
+
+.underline{
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 5px;
+  background: url("../public/wave.svg");
+  background-repeat: repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  background-repeat: repeat-x;
+  background-size: 20px 52px; 
+  background-position: 2px 19px;
+  animation: move 15s linear infinite;
+  -webkit-animation: move 15s linear infinite;
+  animation-play-state: start;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+
+}
+
+/* .underline:before{
+  position: absolute;
+		top: 0;
+		left: 0px;
+		right: 6px;
+		bottom: 0;
+		white-space: nowrap;
+		content: attr(data-text)attr(data-text);
+    overflow:hidden;
+		color: transparent;
+		line-height: 1.4;
+		text-decoration: underline;
+		text-decoration-style: wavy;
+		text-decoration-color: #ffc823;
+  animation: animate 1s linear infinite;
+  border: 1px solid red;
+} */
+
+@keyframes animate {
+  to {
+		margin-left: -1%;
+	}
+
+}
+@-webkit-keyframes move {
+  from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
+  
+  @keyframes move {
+  from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
+  
+
+  .description{
+    position: absolute;
+    font-size: 2rem;
+    z-index: -2;
+    top: 20rem;
+  }

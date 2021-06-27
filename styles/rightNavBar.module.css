@@ -1,0 +1,46 @@
+.rightNav{
+    height: 100%;
+}
+.noWarp{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.itemRightNav{
+    
+    transition: ease .5s;
+   
+}
+
+.itemRightNav::before{
+    content: "";
+    background-color: rgb(255, 200, 21);
+    width: 96px;
+    height: 1em;
+    position: absolute;
+    opacity: 0;
+    padding: 1rem;
+    z-index: 1;
+    transition: ease 1s;
+    
+}
+.itemRightNav:hover:before{
+   opacity: 1;
+   /* transform: scaleX(1.3); */
+    
+}
+
+
+.itemRightNav:hover {
+
+    color: black;
+    /* background-color: white; */
+    transform: scale(1.1);
+    
+}
+
+.activeNavBar{
+    color: black;
+    width: 96px;
+    background-color: rgb(255, 200, 21);
+    transform: scale(1.1);
+}
