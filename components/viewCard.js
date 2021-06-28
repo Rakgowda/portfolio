@@ -4,38 +4,43 @@ import viewCardStyle from "../styles/ViewCard.module.css"
 import Button from "./button"
 import Link from "next/link"
 
-const ViewCard = () => {
+const ViewCard = ({project}) => {
+   let linkPresent = project["link"] == ""?false:true;
+   let centerStyle = linkPresent?{}:{"justify-content":"center"};
     return ( 
         <React.Fragment>
 
                         <div className = {`${viewCardStyle.cardflexItems} `}>
+                          
                             <div className="container" className = {`${viewCardStyle.cardMain} ${customestyle.darkBackground}`}>
+                            
+                            
                                 <div className = {`${viewCardStyle.CardImage}`}>
-                                    <img src="/bank.jpg" className = {`${viewCardStyle.imager}`} width="100%" height="100%" />
+                                    <img src={"/"+project["image"]} className = {`${viewCardStyle.imager}`} width="100%" height="100%" />
                                 </div>
                                 <div id="header" >
-                                   <h5 className={`${customestyle.popfontbold} ${"text-center mt-2"}`}>{"INDIA COVID19 LIVE TRACKING "}</h5>
+                                   <h5 className={`${customestyle.popfontbold} ${"text-center mt-2"}`}>{project["ProjectName"]}</h5>
                                 </div>
                                 <div className={`${customestyle.divider1} ${"mb-2"}`}>
             </div>
-                                <div className = {`${"p-2"} ${viewCardStyle.cardbody}`}>
-                                E - banking website allow us to work on backing sajfsa sfjfsa dsjhfjhsd
-                                    sdfdsgsdg
-                                    sgdgsdgsgasd
-                                    sdfsdfg sfdsfsdf  as sasad as as asdas as dasd
+                                <div className = {`${"p-2 text-center"} ${viewCardStyle.cardbody}`}>
+                                {project["intro"]}
                                     
                                 </div>
                               
-                                <div className = {`${viewCardStyle.cardfooter} ${"mt-2"}`}>
+                                <div className = {`${viewCardStyle.cardfooter} ${"mt-2"}`} style={centerStyle}>
+
                                     
-                                <Button>
+                                <Button link={false} project={project}>
 
                                         Read more
                                   
                                     </Button>
-                                    <Button>
-                                        <Link href="https://indiacovid19tracking.netlify.app/">
-                                            <a   target="blank">
+                                    {
+                                        project["link"] != "" && 
+                                        <Button link={true}>
+                                        <Link href={project["link"]}>
+                                            <a  style={{textDecoration:"none",color:"black"}} target="blank">
 
                                             View Site
 
@@ -44,10 +49,12 @@ const ViewCard = () => {
                                        
 
                                     </Button>
+                                    }
+                                   
                                     
                                     
                                 </div>
-                            
+                                {/* <h5 className = {`${viewCardStyle.headerText}`}>{project["ProjectType"]}</h5> */}
                             
                             </div>
 
