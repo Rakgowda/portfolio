@@ -29,10 +29,10 @@
   
   .buttonlink span{
     position: relative;
-    z-index: 2;
+    
   }
   
-  .buttonlink:after{
+  .buttonlink:before{
     position: absolute;
     content: "";
     top: 0;
@@ -45,11 +45,15 @@
     transition: all .35s;
   }
   
-  .buttonlink:hover{
+  .buttonlink:hover > span{
+    
     color: rgb(0, 0, 0);
+    /* z-index: 1; */
+    
     /* border: 2px solid rgb(255, 255, 255); */
   }
   
-  .buttonlink:hover:after{
+  .buttonlink:hover:before{
     width: 100%;
+    
   }
