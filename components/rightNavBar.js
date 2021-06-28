@@ -40,7 +40,7 @@ const RightNavBar = () => {
     
     return ( 
         <div className={`${"d-flex flex-column align-items-center justify-content-center"} ${custom.border} ${style.rightNav}`}>
-            <div id ="home"  className={`${custom.border} ${"p-3"} `} onClick={()=>seelectedNavBar("home")}>
+            <div id ="home"  className={`${custom.rightFont} ${"p-3"} `} onClick={()=>seelectedNavBar("home")}>
             <Link href="/">
                 <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${homestate?style.activeNavBar:""}`} >
                  
@@ -57,7 +57,7 @@ const RightNavBar = () => {
                 </div>
                 </Link>
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("education")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("education")}>
             <Link href="/education">
             <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${educationstate?style.activeNavBar:""}`}>
                  
@@ -71,7 +71,7 @@ const RightNavBar = () => {
              </div>
              </Link>
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("resume")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("resume")}>
             <Link href="/workexperience">
             <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${Resumestate?style.activeNavBar:""}`}>
             <CgWorkAlt className={`${custom.zindex1}`}></CgWorkAlt>
@@ -84,7 +84,7 @@ const RightNavBar = () => {
              </Link>
                
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("project")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("project")}>
             <Link href="/project">
             <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${projectstate?style.activeNavBar:""}`}>
             <BiCodeCurly  className={`${custom.zindex1}`}></BiCodeCurly> 
