@@ -22,6 +22,8 @@ const WorkExperience = () => {
         ],
         "technology": [
           "Polymer3.js",
+          "React.js",
+          "Redux",
           "javascript",
           "node.js",
           "selenium"
@@ -41,7 +43,7 @@ const WorkExperience = () => {
           ],
           [
             "Role",
-            "MERN developer "
+            "MERN developer{intern}"
           ]
         ],
         "technology": [

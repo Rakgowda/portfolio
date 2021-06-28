@@ -2,6 +2,37 @@ import customestyle from "../styles/Custom.module.css"
 import projectStyle from "../styles/Project.module.css"
 import ViewCard from "../components/viewCard"
 const Project = () => {
+
+    let projectDeatil =[{
+        "ProjectType":"Infosys Project","ProjectName":"E-Banking Website", "intro":"Developing E-Banking web application using Polymer.js andMaterialize CSS.",
+        "ListPoint":["Developing E-Banking web application using Polymer.js andMaterialize CSS.",
+    "Identified web-based user interactions and developed highlyresponsive user interface components via polymer concepts",
+"Developed custom switch component to select differentpayment type","Fixed bugs from existing website and implementedenhancements that significantly improved web functionalityand speed."
+],"link":"","image":"banking.jpg"
+    },{
+        "ProjectType":"Infosys Project","ProjectName":"Salesman quotation", "intro":"Developed Salesman quotation web app using MERN.",
+        "ListPoint":["Developed Salesman quotation web app using MERN.",
+    "Designed and developed back-end using Express.js, Node.jsand Mongo DB",
+"Determined the structure and design of web pages based onuser requirements and balanced functional & aestheticdesigns.",
+"Developed custom card view to show the customerquotation request",
+"Used REDUX to store global variables",
+"Developed approval flow for quotation. Where all quotationwill go for manager approve."
+],"link":"","image":"quoation.jpg"
+    },{
+        "ProjectType":"Personal Project","ProjectName":"Covid-19 Live Tracking", "intro":"Developed covid-19 live tracking website using react.js and REDUX",
+        "ListPoint":["Developed covid-19 live tracking website using react.js and REDUX.",
+        "User can able to view India total number of infected, recovered,active and death cases.",
+    "User can also able to select their state to view total number ofinfected, recovered, active and death cases.",
+"User can hover on state map to see total number of infected,recovered, active and death cases"
+],"link":"https://indiacovid19tracking.netlify.app/","image":"corona.jpg"
+    },{
+        "ProjectType":"Personal Project","ProjectName":"GST invoice generator", "intro":"Developed small scale business management windows app usingelectron.js and react.js",
+        "ListPoint":["Developed small scale business management windows app usingelectron.js and react.js",
+        "User can able to generate GST invoice bill after selling he items.",
+    "User can track the buy and sell items."
+],"link":"","image":"invoice.jpg"
+    }]
+
     return ( 
         <div>
             <div className={`${customestyle.title2} ${"text-center"}`}>
@@ -17,8 +48,12 @@ const Project = () => {
                 <div id="project body">
                     <div className = {`${projectStyle.cardflex} ${customestyle.popfont}`}>
 
-                    <ViewCard > </ViewCard>
-                    <ViewCard > </ViewCard>
+
+                  {
+                        projectDeatil.map(project=>{
+                            return (<ViewCard project={project}> </ViewCard>)
+                        })
+                  }
                     
                         
                     </div>
