@@ -56,8 +56,9 @@
 
 .status{
     position: absolute;
-    right: 100px;
-    top: 67px;
+    left: calc(100% - 46%);
+    top: 4rem;
+
 
 }
 
@@ -68,4 +69,8 @@
     background: rgb(28, 31, 51);;
     margin-top: 1px;
 
+}
+.flex{
+    display: flex;
+    justify-content: center;
 }
