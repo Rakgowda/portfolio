@@ -32,12 +32,14 @@ const InfoLayout = () => {
         
             <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`}> 
             <div className="d-flex flex-column justify-content-center align-content-center">
-                <div className={custom.mt8+ " d-flex justify-content-center p-2"}>
+               <div className = {`${style.flex}`}>
+               <div className={custom.mt8+ " d-flex justify-content-center p-2"}>
                 <Image src="/index.png" className={style.infoImage} width={80} height={80} alt="rakshithgowdakv"></Image> 
                   
                 </div>
          
                 <div data-tip data-for="statusforwork" className={`${custom.readytoWork} ${style.status}`}></div>
+               </div>
                 <ReactTooltip  id="statusforwork" delay-show='1000' type="dark" place="right" effect="float">
         I'm available to work
       </ReactTooltip>
@@ -113,7 +115,7 @@ const InfoLayout = () => {
 
 <div className={`${custom.textSecondary}`}>
 
-<ul className={`${"list-unstyled "}`}>
+<ul className={`${"list-unstyled "}`} style={{"margin-bottom": "-.5rem"}}>
 
 {knowledges.map(knowledge=>{
     return(
