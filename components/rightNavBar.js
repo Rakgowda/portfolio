@@ -40,15 +40,25 @@ const RightNavBar = () => {
     
     return ( 
         <div className={`${"d-flex flex-column align-items-center justify-content-center"} ${custom.border} ${style.rightNav}`}>
-            <div id ="home"  className={`${custom.border} ${"p-3"} `} onClick={()=>seelectedNavBar("home")}>
+             <style jsx>{`
+       
+       @media screen and (min-width: 0px) and (max-width: 1000px) {
+        .rightNavText { display: none; }  
+        .rightNavSvg {font-size:1.5rem}
+        
+        
+      }
+
+      `}</style>
+            <div id ="home"  className={`${custom.rightFont} ${"p-3"} `} onClick={()=>seelectedNavBar("home")}>
             <Link href="/">
-                <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${homestate?style.activeNavBar:""}`} >
+                <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} ${homestate?style.activeNavBar:""}`} >
                  
-                    <FiHome className={`${custom.zindex1}`}>
+                    <FiHome className={`${custom.zindex1} ${"rightNavPadding"}`}>
 
                     </FiHome>
                    
-                    <div  className={`${custom.zindex1} ${"m-1"}`}>
+                    <div  className={`${custom.zindex1} ${"m-1 rightNavText"}`}>
                   
                     Home
                    
@@ -57,13 +67,13 @@ const RightNavBar = () => {
                 </div>
                 </Link>
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("education")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("education")}>
             <Link href="/education">
-            <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${educationstate?style.activeNavBar:""}`}>
+            <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} ${educationstate?style.activeNavBar:""}`}>
                  
-                 <FiBookOpen className={`${custom.zindex1}`}></FiBookOpen>
+                 <FiBookOpen className={`${custom.zindex1} ${"rightNavPadding"}` }></FiBookOpen>
                  
-                 <div className={`${custom.zindex1} ${"m-1"}`}>
+                 <div className={`${custom.zindex1} ${"m-1 rightNavText"}`}>
                  Education
                  </div>
                 
@@ -71,12 +81,12 @@ const RightNavBar = () => {
              </div>
              </Link>
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("resume")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("resume")}>
             <Link href="/workexperience">
-            <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${Resumestate?style.activeNavBar:""}`}>
-            <CgWorkAlt className={`${custom.zindex1}`}></CgWorkAlt>
+            <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} ${Resumestate?style.activeNavBar:""}`}>
+            <CgWorkAlt className={`${custom.zindex1} ${"rightNavPadding"}`}></CgWorkAlt>
              
-                 <div  className={`${custom.zindex1} ${"m-1"}`}>
+                 <div  className={`${custom.zindex1} ${"m-1 rightNavText"}`}>
                  Experience
                  </div>
              
@@ -84,11 +94,11 @@ const RightNavBar = () => {
              </Link>
                
             </div>
-            <div className={`${custom.border} ${"p-3"}`} onClick={()=>seelectedNavBar("project")}>
+            <div className={`${custom.rightFont} ${"p-3"}`} onClick={()=>seelectedNavBar("project")}>
             <Link href="/project">
-            <div className={`${"d-flex justify-content-center align-items-center "} ${style.itemRightNav} ${projectstate?style.activeNavBar:""}`}>
-            <BiCodeCurly  className={`${custom.zindex1}`}></BiCodeCurly> 
-                 <div className={`${style.noWarp} ${"m-1"} ${custom.zindex1}`} >
+            <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} ${projectstate?style.activeNavBar:""}`}>
+            <BiCodeCurly  className={`${custom.zindex1} ${"rightNavPadding"}`}></BiCodeCurly> 
+                 <div className={`${style.noWarp} ${"m-1 rightNavText"} ${custom.zindex1}`} >
                  Project
                  </div>
              
