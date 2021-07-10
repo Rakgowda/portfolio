@@ -9,6 +9,7 @@ import Link from "next/link"
 import {useState,useEffect} from "react"
 import { useRouter } from 'next/router'
 import {BiCodeCurly} from "react-icons/bi"
+import React from "react"
 const RightNavBar = () => {
 
     const router = useRouter()
@@ -39,8 +40,8 @@ const RightNavBar = () => {
 
     
     return ( 
-        <div className={`${"d-flex flex-column align-items-center justify-content-center"} ${custom.border} ${style.rightNav}`}>
-             <style jsx>{`
+        <React.Fragment>
+              <style jsx>{`
        
        @media screen and (min-width: 0px) and (max-width: 1000px) {
         .rightNavText { display: none; }  
@@ -48,8 +49,26 @@ const RightNavBar = () => {
         
         
       }
+         
+@media screen and (min-width: 0px) and (max-width: 750px) {
+    #rightDiv{
+       flex-direction: row !important;
+    }
+    
+    
+  }
+  @media screen and (min-width: 750px) {
+    #rightDiv{
+       flex-direction: column !important;
+    }
+    
+    
+  }
 
       `}</style>
+      
+        <div id="rightDiv" className={`${"d-flex align-items-center justify-content-center"} ${custom.border} ${style.rightNav}`}>
+           
             <div id ="home"  className={`${custom.rightFont} ${"p-3"} `} onClick={()=>seelectedNavBar("home")}>
             <Link href="/">
                 <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} ${homestate?style.activeNavBar:""}`} >
@@ -107,6 +126,7 @@ const RightNavBar = () => {
          </div>    
         
         </div>
+        </React.Fragment>
      );
 }
  
