@@ -38,9 +38,30 @@
     
 }
 
-.activeNavBar{
-    color: black;
-    width: 96px;
-    background-color: rgb(255, 200, 21);
-    transform: scale(1.1);
+
+
+    .activeNavBar{
+        color: black;
+        width: 96px;
+        background-color: rgb(255, 200, 21);
+        transform: scale(1.1);
+    
+    }
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+    .activeNavBar{
+        color: black;
+        width: 50px;
+        background-color: rgb(255, 200, 21);
+        transform: scale(1.1);
+        /* transform: scale(1.1); */
+        padding: 3px;
+    
+    }
+
+    .itemRightNav::before{
+        width: 50px;
+    }
 }
+
+
