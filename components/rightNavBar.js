@@ -9,6 +9,7 @@ import Link from "next/link"
 import {useState,useEffect} from "react"
 import { useRouter } from 'next/router'
 import {BiCodeCurly} from "react-icons/bi"
+import {FaFileDownload} from "react-icons/fa"
 import React from "react"
 const RightNavBar = () => {
 
@@ -37,6 +38,55 @@ const RightNavBar = () => {
         
      
     }
+
+    function downloadResume() { 
+        debugger;
+//         fetch('http://www.africau.edu/images/default/sample.pdf', {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/pdf',
+//     },
+//   })
+//   .then((response) => response.blob())
+//   .then((blob) => {
+//     // Create blob link to download
+//     const url = window.URL.createObjectURL(
+//       new Blob([blob]),
+//     );
+//     const link = document.createElement('a');
+//     link.href = url;
+//     link.setAttribute(
+//       'download',
+//       `Rakshithgowdakv.pdf`,
+//     );
+
+//     // Append to html link element page
+//     document.body.appendChild(link);
+
+//     // Start download
+//     link.click();
+
+//     // Clean up and remove the link
+//     link.parentNode.removeChild(link);
+//   }).catch(e=>{alert("Failed to download")});
+
+const link = document.createElement('a');
+    link.href = "/pdf/RakshithGowdaKV.pdf";
+    link.setAttribute(
+      'download',
+      `RakshithGowdaKV.pdf`,
+    );
+
+    // Append to html link element page
+    document.body.appendChild(link);
+
+    // Start download
+    link.click();
+
+    // Clean up and remove the link
+    link.parentNode.removeChild(link);
+
+     }
 
     
     return ( 
@@ -124,6 +174,17 @@ const RightNavBar = () => {
              </div>
              </Link>
          </div>    
+         <div className={`${custom.rightFont} ${"p-3"}`} onClick={downloadResume}>
+            <Link href="">
+            <div className={`${"d-flex justify-content-center align-items-center rightNavSvg"} ${style.itemRightNav} `}>
+            <FaFileDownload  className={`${custom.zindex1} ${"rightNavPadding"}`}></FaFileDownload> 
+                 <div className={`${style.noWarp} ${"m-1 rightNavText"} ${custom.zindex1}`} >
+                 Resume
+                 </div>
+             
+             </div>
+             </Link>
+         </div>  
         
         </div>
         </React.Fragment>
