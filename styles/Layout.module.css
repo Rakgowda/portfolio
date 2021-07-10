@@ -61,12 +61,12 @@ scrollbar-width: none;  /* Firefox */
     
     @media screen and (min-width: 0px) and (max-width: 750px) {
         .rightNav{
-            position: absolute;
+            position: fixed;
             /* right: 0px; */
             /* height: 100%; */
             overflow: hidden;
             bottom: 0px;
-            height: 50px;
+            height: 80px;
             width: 100%;
             
         }
