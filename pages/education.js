@@ -47,6 +47,8 @@ imgsrc:"/coding.svg",alt:"be"
             <div className = {`${customestyle.bottom}`}>
 
 </div>
+<br></br>
+<br></br>
         </div>
      );
 }
