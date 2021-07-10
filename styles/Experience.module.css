@@ -86,3 +86,19 @@
     -ms-flex-align: center;
     align-items: center;
 }
+
+.itemText{
+    font-size: 2em;
+    overflow: hidden;
+    display: block;
+}
+@media screen and (min-width: 0px) and (max-width: 750px) {
+	.card{
+		width: 100%;
+	}
+	.childitemcard{
+
+        padding-bottom: 2.3em;
+        padding-top: 2.3em;
+    }
+  }

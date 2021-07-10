@@ -77,6 +77,9 @@ const WorkExperience = () => {
 
                 </Card>
             </div>
+            <div className = {`${customestyle.bottom}`}>
+
+                </div>
         </div>
      );
 }

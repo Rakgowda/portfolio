@@ -4,7 +4,7 @@ import ViewCard from "../components/viewCard"
 const Project = () => {
 
     let projectDeatil =[{
-        "ProjectType":"Infosys Project","ProjectName":"E-Banking Website", "intro":"Developing E-Banking web application using Polymer.js andMaterialize CSS.",
+        "ProjectType":"Infosys Project","ProjectName":"E-Banking Website", "intro":"Developing E-Banking web application using Polymer.js and Materialize CSS.",
         "ListPoint":["Developing E-Banking web application using Polymer.js andMaterialize CSS.",
     "Identified web-based user interactions and developed highly responsive user interface components via polymer concepts",
 "Developed custom switch component to select different payment type","Fixed bugs from existing website and implemented enhancements that significantly improved web functionality and speed."
@@ -57,6 +57,9 @@ const Project = () => {
                     
                         
                     </div>
+
+                </div>
+                <div className = {`${customestyle.bottom}`}>
 
                 </div>
         </div>

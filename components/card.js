@@ -12,8 +12,12 @@ const Card = (props) => {
                     <div id="card1" className={expStyle.carditem}>
 
                     <div id="childMainCard" className={`${expStyle.childCard}`}>
-                        <div id="childItemCard1" className={`${expStyle.childitemcard} ${customestyle.primarybackgroud} ${"text-center"} `}>
+                        <div id="childItemCard1" className={`${expStyle.childitemcard} ${customestyle.primarybackgroud} ${"text-center"} ${expStyle.itemText}`}>
+                       
+                            <div>
                             <h2 className={customestyle.popfontbold}>{data.company}</h2>
+                            </div>                            
+                             {/* {data.company} */}
                         </div>
                         <div id="childItemCard2" className={expStyle.childitemcard}>
                            

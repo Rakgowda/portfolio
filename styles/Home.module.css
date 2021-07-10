@@ -72,8 +72,12 @@
   
 
   .description{
-    position: absolute;
+    /* position: absolute; */
     font-size: 2rem;
     z-index: -2;
     top: 20rem;
   }
+
+
+
+

@@ -59,4 +59,26 @@ scrollbar-width: none;  /* Firefox */
     grid-row-gap: 0px;
     }
     
-    
+    @media screen and (min-width: 0px) and (max-width: 750px) {
+        .rightNav{
+            position: absolute;
+            /* right: 0px; */
+            /* height: 100%; */
+            overflow: hidden;
+            bottom: 0px;
+            height: 50px;
+            width: 100%;
+            
+        }
+        
+        .centerScreen{
+            position: absolute;
+            left: 0%;
+            height: 100%;
+            overflow-y: scroll;
+            width: auto;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        }
+      }

@@ -211,3 +211,27 @@ justify-content: center;
 	
 
 }
+
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+	.educationBox{
+		width: 100%;
+	}
+	.title{
+		font-size: 3em;
+		font-family: Poppins;
+		font-weight: bold;
+		margin: 3rem;
+	}
+	.hat{
+		width:40px;
+	}
+	.title2{
+		font-size: 2rem;
+	
+		margin-top: 3rem;
+	}
+	.bottom{
+		margin-top: 5rem;
+	}
+  }

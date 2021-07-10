@@ -18,10 +18,29 @@ export default function Home() {
   }
   return (
     <div >
-      <div className="d-flex justify-content-center align-item-center m-4">
+      <style jsx>
+        {
+          `
+          @media screen and (min-width: 0px) and (max-width: 750px) {
+            #homePage{
+                flex-direction: column-reverse;
+            }
+            #homeImage{
+              width: 100%;
+              display: flex;
+              justify-content: center;
+            }
+            .Hometext{
+              text-align: center;
+            }
+        }
+        `
+        }
+      </style>
+      <div id="homePage" className="d-flex justify-content-center align-item-center m-4">
             <div className="m-3">
-            <h1 className={`${styles.title}`}>Hi👋, I'm Rakshith,</h1>
-      <h4>a <span><span className={`${styles.underline}`} data-text="front-end" onMouseEnter={()=>setFrontEndImage(false)} onMouseLeave={()=>setFrontEndImage(true)}>front-end</span></span> and 
+            <h1 className={`${styles.title} ${"Hometext"}`}>Hi👋, I'm Rakshith,</h1>
+      <h4 className = {`${"Hometext"}`}>a <span><span className={`${styles.underline}`} data-text="front-end" onMouseEnter={()=>setFrontEndImage(false)} onMouseLeave={()=>setFrontEndImage(true)}>front-end</span></span> and 
       <span><span className={`${styles.underline}`} data-text="front-end" onMouseEnter={()=>setBackEndImage(false)} onMouseLeave={()=>setBackEndImage(true)}> back-end</span></span> developer.</h4>
       <div className="d-flex justify-center">
       <div className={``} hidden={frontEnd}>
@@ -32,7 +51,7 @@ export default function Home() {
       </div>
       </div>
             </div>
-            <div>
+            <div id="homeImage">
 
             <Image src="/index.png" className={customstyle.infoImage} width={200} height={200} alt="rakshithgowdakv"></Image> 
              
@@ -43,7 +62,11 @@ export default function Home() {
       I specialize in UI Design, Responsive Web Design, and back-end Development. I love❤️ to create a websites
       that solve the real time problems in the world. 
       </div>
-      
+
+
+      <div className = {`${customstyle.bottom}`}>
+
+</div>
         
      
     </div>
