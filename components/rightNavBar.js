@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import {BiCodeCurly} from "react-icons/bi"
 import {FaFileDownload} from "react-icons/fa"
 import React from "react"
+import {Snakbar} from "./snakbar"
 const RightNavBar = () => {
 
     const router = useRouter()
@@ -19,6 +20,8 @@ const RightNavBar = () => {
     const [educationstate, setEducationstate] = useState(false);
     const [Resumestate, setresumestate] = useState(false);
     const [projectstate, setprojectstate] = useState(false);
+
+    const snackbarRef = React.createRef(null);
 
     useEffect(() => {
         if(router.route != undefined)
@@ -70,6 +73,7 @@ const RightNavBar = () => {
 //     link.parentNode.removeChild(link);
 //   }).catch(e=>{alert("Failed to download")});
 
+    snackbarRef.current.openSankBar();
 const link = document.createElement('a');
     link.href = "/pdf/RakshithGowdaKV.pdf";
     link.setAttribute(
@@ -85,6 +89,7 @@ const link = document.createElement('a');
 
     // Clean up and remove the link
     link.parentNode.removeChild(link);
+    
 
      }
 
@@ -185,8 +190,11 @@ const link = document.createElement('a');
              </div>
              </Link>
          </div>  
-        
+      
         </div>
+       <Snakbar  ref = {snackbarRef}>
+           Downloading resume.....
+       </Snakbar>
         </React.Fragment>
      );
 }

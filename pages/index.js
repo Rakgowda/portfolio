@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import customstyle from "../styles/Custom.module.css"
 import {useState} from "react"
-
+import Skeleton from 'react-loading-skeleton';
 
 
 export default function Home() {
@@ -52,13 +52,14 @@ export default function Home() {
       </div>
             </div>
             <div id="homeImage">
-
+            <Skeleton circle={true} className={customstyle.infoImage} height={200} width={200} />
             <Image src="/index.png" className={customstyle.infoImage} width={200} height={200} alt="rakshithgowdakv"></Image> 
              
             </div>
 
       </div>
       <div className={`${customstyle.ml3} ${styles.description}`}>
+     
       I specialize in UI Design, Responsive Web Design, and back-end Development. I love❤️ to create a websites
       that solve the real time problems in the world. 
       </div>
