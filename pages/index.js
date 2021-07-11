@@ -2,20 +2,29 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import customstyle from "../styles/Custom.module.css"
-import {useState} from "react"
+import {useState,useRef,useEffect} from "react"
 import Skeleton from 'react-loading-skeleton';
 
 
 export default function Home() {
   const [frontEnd, setfrontEnd] = useState(true);
   const [backEnd, setBackEnd] = useState(true)
+  // const image = useRef()
+  const [hide, setHide] = useState(true)
 
+ 
   function setFrontEndImage(value) {
     setfrontEnd(value)
   }
   function setBackEndImage(value) {
     setBackEnd(value)
   }
+  function hideSkeleton()
+  {
+    setHide(false)
+  }
+
+
   return (
     <div >
       <style jsx>
@@ -51,9 +60,22 @@ export default function Home() {
       </div>
       </div>
             </div>
+         
             <div id="homeImage">
-            <Skeleton circle={true} className={customstyle.infoImage} height={200} width={200} />
-            <Image src="/index.png" className={customstyle.infoImage} width={200} height={200} alt="rakshithgowdakv"></Image> 
+              <div className={hide?"":customstyle.hide}>
+            <Skeleton circle={true} className={`${customstyle.infoImage}`} height={200} width={200} />
+            </div>
+            <Image 
+            onLoad={hideSkeleton}
+            src="/index.png" 
+            className={customstyle.infoImage} 
+            width={200} 
+            height={200} 
+            alt="rakshithgowdakv" 
+            placeholder="blur"
+            >
+              
+              </Image> 
              
             </div>
 

@@ -27,7 +27,7 @@ const Card = (props) => {
                                 {
                                     data.detail.map(e=>{
                                         
-                                        console.log(e)
+                                        // console.log(e)
                                         return ( <div>
                                         <span className={customestyle.primaryColor}>{e[0]}</span> : {e[1]}
                                     </div>)

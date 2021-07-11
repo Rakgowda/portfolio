@@ -6,7 +6,7 @@ import {IoLocationOutline} from "react-icons/io5"
 import {GiTiedScroll} from "react-icons/gi"
 
 const GridList = (props) => {
-    console.log(props)
+    // console.log(props)
     let educationinfo=props.educationinfo;
     return (  
 

@@ -15,7 +15,7 @@ import {Snakbar} from "./snakbar"
 const RightNavBar = () => {
 
     const router = useRouter()
-    console.log(router)
+    // console.log(router)
     const [homestate, setHomestate] = useState(false);
     const [educationstate, setEducationstate] = useState(false);
     const [Resumestate, setresumestate] = useState(false);
