@@ -1,6 +1,7 @@
 import React from "react";
 import customestyle from "../styles/Custom.module.css"
 import expStyle from "../styles/Experience.module.css"
+import {  Tween,Reveal } from 'react-gsap';
 
 const Card = (props) => {
     // console.log(props.data)
@@ -8,7 +9,10 @@ const Card = (props) => {
    
     return ( 
         <React.Fragment>
+
             <div id="card" className={expStyle.card}>
+            <Tween ease="Back.easeIn"  stagger={0.5} from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1.5}>
+
                     <div id="card1" className={expStyle.carditem}>
 
                     <div id="childMainCard" className={`${expStyle.childCard}`}>
@@ -43,6 +47,8 @@ const Card = (props) => {
                     </div>
                     <div className={`${customestyle.divider1} ${"mb-2"}`}>
             </div>
+            <Tween ease="Back.easeIn"  stagger={0.5} from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1.5}>
+
                     <div className={`${"mb-3"} ${customestyle.ml1}`}>
                     <span className={customestyle.primaryColor}>Technology </span> 
                         
@@ -56,8 +62,10 @@ const Card = (props) => {
                              return <span className={`${"badge m-1 text-dark"} ${customestyle.badgePill} ${customestyle.yellow}`}>{e}</span>
                          })}
                     </div>
+                    </Tween>
                        
                     </div>
+                </Tween>
                     
                 </div>
         </React.Fragment>

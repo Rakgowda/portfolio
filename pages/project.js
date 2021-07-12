@@ -1,6 +1,8 @@
 import customestyle from "../styles/Custom.module.css"
 import projectStyle from "../styles/Project.module.css"
 import ViewCard from "../components/viewCard"
+import {  Tween,Reveal } from 'react-gsap';
+
 const Project = () => {
 
     let projectDeatil =[{
@@ -35,6 +37,8 @@ const Project = () => {
 
     return ( 
         <div>
+            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
+
             <div className={`${customestyle.title2} ${"text-center"}`}>
                 <div>
                 <span>{"{"}</span> Projects <span>{"}"}</span>
@@ -44,6 +48,7 @@ const Project = () => {
 
                 </div>
                 </div>
+                </Tween>
 
                 <div id="project body">
                     <div className = {`${projectStyle.cardflex} ${customestyle.popfont}`}>

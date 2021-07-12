@@ -78,6 +78,11 @@
     top: 20rem;
   }
 
+  @media screen and (min-width: 0px) and (max-width: 750px) {
 
+    .description{
+      font-size: 1.5rem;
+    }
+  }
 
 

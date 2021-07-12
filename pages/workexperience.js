@@ -1,6 +1,8 @@
 import customestyle from "../styles/Custom.module.css"
 import expStyle from "../styles/Experience.module.css"
 import Card from "../components/card"
+import {  Tween,Reveal } from 'react-gsap';
+import React from "react";
 
 const WorkExperience = () => {
 
@@ -57,6 +59,7 @@ const WorkExperience = () => {
         <div>
            <div id="Experience Title">
          
+            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
                 
                 <div className={`${customestyle.title2} ${"text-center"}`}>
                 <div>
@@ -67,15 +70,21 @@ const WorkExperience = () => {
 
                 </div>
                 </div>
+                </Tween>
             </div>
 
             <div id="Experience body" className={expStyle.cardcenter}>
+            
+  
                 <Card data={Experience}>
 
                 </Card>
+                
+
                 <Card data={Experience2}>
 
                 </Card>
+                
             </div>
             <div className = {`${customestyle.bottom}`}>
 

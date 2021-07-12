@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import customstyle from "../styles/Custom.module.css"
 import {useState,useRef,useEffect} from "react"
 import Skeleton from 'react-loading-skeleton';
+import {  Tween,Reveal } from 'react-gsap';
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <div >
+
       <style jsx>
         {
           `
@@ -48,6 +50,8 @@ export default function Home() {
       </style>
       <div id="homePage" className="d-flex justify-content-center align-item-center m-4">
             <div className="m-3">
+            
+            <Tween ease="Back.easeIn"  stagger={0.5} from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1.5}>
             <h1 className={`${styles.title} ${"Hometext"}`}>Hi👋, I'm Rakshith,</h1>
       <h4 className = {`${"Hometext"}`}>a <span><span className={`${styles.underline}`} data-text="front-end" onMouseEnter={()=>setFrontEndImage(false)} onMouseLeave={()=>setFrontEndImage(true)}>front-end</span></span> and 
       <span><span className={`${styles.underline}`} data-text="front-end" onMouseEnter={()=>setBackEndImage(false)} onMouseLeave={()=>setBackEndImage(true)}> back-end</span></span> developer.</h4>
@@ -59,6 +63,8 @@ export default function Home() {
         <Image src="/backend.gif" width="200px" height ="200px" ></Image>
       </div>
       </div>
+      </Tween>
+      
             </div>
          
             <div id="homeImage">
@@ -80,17 +86,21 @@ export default function Home() {
             </div>
 
       </div>
+      <Reveal >
+      <Tween ease="Back.easeIn"  from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
+
       <div className={`${customstyle.ml3} ${styles.description}`}>
      
-      I specialize in UI Design, Responsive Web Design, and back-end Development. I love❤️ to create a websites
-      that solve the real time problems in the world. 
+      I specialize in UI design🎨, responsive web design, and back-end development. Responsible for developing 
+      website that gives users a seamless and rich internet experience. 
       </div>
-
-
+</Tween>
+</Reveal>
       <div className = {`${customstyle.bottom}`}>
 
 </div>
         
+
      
     </div>
   )

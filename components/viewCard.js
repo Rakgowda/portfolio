@@ -3,12 +3,15 @@ import customestyle from "../styles/Custom.module.css"
 import viewCardStyle from "../styles/ViewCard.module.css"
 import Button from "./button"
 import Link from "next/link"
+import {  Tween,Reveal } from 'react-gsap';
+
 
 const ViewCard = ({project}) => {
    let linkPresent = project["link"] == ""?false:true;
    let centerStyle = linkPresent?{}:{"justify-content":"center"};
     return ( 
         <React.Fragment>
+            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
 
                         <div className = {`${viewCardStyle.cardflexItems} `}>
                           
@@ -60,7 +63,7 @@ const ViewCard = ({project}) => {
 
  
                         </div>
-
+</Tween>
         </React.Fragment>
      );
 }
