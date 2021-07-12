@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Image from 'next/image'
 import style from "../styles/InfoLayout.module.css"
 import custom from "../styles/Custom.module.css"
@@ -10,6 +10,7 @@ const ReactTooltip = dynamic(() => import("react-tooltip"), {
     ssr: false,
   });
 
+ 
 
 const InfoLayout = ({hamberger,toggelHamberger}) => {
  
@@ -19,6 +20,24 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
     //   console.log(Math.abs(age_dt.getUTCFullYear() - 1970))
         return Math.abs(age_dt.getUTCFullYear() - 1970);
     }
+    // useEffect(() => {
+    //     if(hamberger)
+    //     {
+    //         window.document.querySelector("#slideBar1").style.display = "none";
+    //         setTimeout(() => {
+    //             if(window.innerWidth<750)
+    //             {
+    //                 window.document.querySelector("#slideBar1").style.display = "block";
+    //             }
+                
+    //         }, 1000);
+    //     }
+    //     else{
+    //         window.document.querySelector("#slideBar1").style.display = "none";
+    //     }
+
+       
+    // }, [hamberger])
     const info ={"Residence":"Mandya","City":"Mandya","Age":calculate_age(new Date(1996,5, 2))}
 
 
@@ -31,10 +50,11 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 
     return (  
         <div className={`${custom.darkBackground}`}>
-        <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger} 
+        
+            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`}> 
+            <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger} 
             
             ></VscClose>
-            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`}> 
             <div className="d-flex flex-column justify-content-center align-content-center">
                <div className = {`${style.flex}`}>
                <div className={custom.mt8+ " d-flex justify-content-center p-2"}>
