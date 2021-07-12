@@ -59,6 +59,16 @@ scrollbar-width: none;  /* Firefox */
     grid-row-gap: 0px;
     }
     
+.hamberger{
+    width: calc(6%);
+height: calc(6%);
+position: absolute;
+top: 7px;
+}
+
+.toggle{
+    margin: 0%;
+}
     @media screen and (min-width: 0px) and (max-width: 750px) {
         .rightNav{
             position: fixed;
@@ -80,5 +90,22 @@ scrollbar-width: none;  /* Firefox */
             overflow-y: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+        }
+        .hamberger{
+            display: block;
+        }
+        .hambergerclose
+        {
+            display: block;
+        }
+      }
+
+      @media screen and (min-width: 751px) and (max-width: 2750px) {
+        .hamberger{
+            display: none;
+        }
+        .hambergerclose
+        {
+            display: none;
         }
       }

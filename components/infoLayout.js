@@ -4,12 +4,14 @@ import style from "../styles/InfoLayout.module.css"
 import custom from "../styles/Custom.module.css"
 import dynamic from "next/dynamic";
 import SocialMediaIcon from "./socialMediaIcon"
+import { VscClose } from "react-icons/vsc";
+
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
     ssr: false,
   });
 
 
-const InfoLayout = () => {
+const InfoLayout = ({hamberger,toggelHamberger}) => {
  
     function calculate_age(dob) { 
         var diff_ms = Date.now() - dob.getTime();
@@ -29,7 +31,9 @@ const InfoLayout = () => {
 
     return (  
         <div className={`${custom.darkBackground}`}>
-        
+        <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger} 
+            
+            ></VscClose>
             <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`}> 
             <div className="d-flex flex-column justify-content-center align-content-center">
                <div className = {`${style.flex}`}>

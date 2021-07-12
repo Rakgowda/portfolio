@@ -74,3 +74,19 @@
     display: flex;
     justify-content: center;
 }
+.hambergerclose{
+    width: calc(6%);
+    height: calc(6%);
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    z-index: 1;
+}
+@media screen and (min-width: 751px) and (max-width: 2750px) {
+   
+    .hambergerclose
+    {
+        display: none;
+    }
+  }
+
