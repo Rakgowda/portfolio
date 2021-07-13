@@ -5,6 +5,8 @@ import custom from "../styles/Custom.module.css"
 import dynamic from "next/dynamic";
 import SocialMediaIcon from "./socialMediaIcon"
 import { VscClose } from "react-icons/vsc";
+import {  Tween,Reveal } from 'react-gsap';
+
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
     ssr: false,
@@ -50,8 +52,29 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 
     return (  
         <div className={`${custom.darkBackground}`}>
+            <style jsx>
+                {
+                    `
+                    @media screen and (min-width: 0px) and (max-width: 750px) {
+                        .skills{
+                            width:25%;
+                        }
+
+                        .afterskill{
+                            margin-top:0rem !important;
+                        }
+                        
+                        
+                      }
+
+                    `
+                }
+
+            </style>
         
-            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`}> 
+            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`} style={{zIndex:2}}> 
+            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={.5}>
+
             <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger} 
             
             ></VscClose>
@@ -76,16 +99,21 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
         Front-end Developer 
             </div>         
             </div>  
+            </Tween>
             
             </div>
 
             {/* *** Begging of location info  */}
             <div className={custom.border +" p-4"}>
+
                 <ul className={`${"list-unstyled "}`}>
+            <Tween ease="Back.easeIn" stagger={0.5}  from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
+
 
               {
                     Object.keys(info).map(e=>{
                        return (
+
                         <li className="p-1" key={e}>
                         <div className="d-flex justify-content-between">
                         <div className={style.subPrimary}>
@@ -103,6 +131,7 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
                        )
                     })
               }
+                </Tween>
                     
                 </ul>
                 <div className={custom.divider}>
@@ -114,20 +143,23 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
             <div className={custom.border +"  p-4"}>
                 <h5 className={`${custom.poppinfont} ${custom.b} ${custom.mb1} ${custom.border} ${"mb-3"}`}>Skill</h5>
                 <div className={`${custom.border} ${"row"}`}>
+                <Tween ease="Back.easeIn" stagger={0.5}  from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
 
                 {
                     skills.map(skill=>{
                         return(
-                    <div  className="col-sm-4 d-flex justify-content-center">
+
+                    <div  className="col-sm-4 d-flex justify-content-center skills">
+
                     <span className={`${"badge m-1 text-dark"} ${custom.badgePill} ${custom.yellow}`}>{skill}</span>
                     </div>
                         )
                     })
                 }
                     
-                  
+                  </Tween>
                 </div>
-                <div className={`${custom.divider} ${"mt-4"}`}>
+                <div className={`${custom.divider} ${"mt-4 afterskill"}`}>
             </div>       
 </div>
 
@@ -140,6 +172,7 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 <div className={`${custom.textSecondary}`}>
 
 <ul className={`${"list-unstyled "}`} style={{"margin-bottom": "-.5rem"}}>
+<Tween ease="Back.easeIn" stagger={0.5}  from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
 
 {knowledges.map(knowledge=>{
     return(
@@ -151,7 +184,7 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 </li>
     )
 })}
-
+</Tween>
 </ul>
 
     

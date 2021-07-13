@@ -11,7 +11,7 @@ const ViewCard = ({project}) => {
    let centerStyle = linkPresent?{}:{"justify-content":"center"};
     return ( 
         <React.Fragment>
-            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
+            <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1.5}>
 
                         <div className = {`${viewCardStyle.cardflexItems} `}>
                           
