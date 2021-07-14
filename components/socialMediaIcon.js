@@ -5,14 +5,29 @@ import {AiFillGithub,AiFillLinkedin,AiFillMail,AiFillTwitterCircle} from "react-
 const SocialMediaIcon = () => {
     return ( 
         <div className={`${custom.border} ${"d-flex justify-content-center"}` }>
-            <div className={"m-2 h5"}>
+            <style jsx>
+                {
+                    `
+
+                    @media screen and (min-width: 0px) and (max-width: 750px) {
+                        .socialicon{
+                            font-size:1.8em;
+                        }
+                        
+                    }
+                    
+                    `
+                }
+
+            </style>
+            <div className={"m-2 h5 socialicon"}>
                 
                     <a href="https://github.com/Rakgowda" target="_blank" className={custom.inheritColor}>
                    <AiFillGithub></AiFillGithub>
                    </a>
                
             </div>
-            <div className={"m-2 h5"}>
+            <div className={"m-2 h5 socialicon"}>
                  <a href="https://www.linkedin.com/in/rakshithgowda-kv/" target="_blank" className={custom.inheritColor}>
                    <AiFillLinkedin></AiFillLinkedin>
                </a>
@@ -22,7 +37,7 @@ const SocialMediaIcon = () => {
                    <AiFillMail></AiFillMail>
                </a>
             </div> */}
-            <div className={"m-2 h5"}>
+            <div className={"m-2 h5 socialicon"}>
                  <a href="https://twitter.com/Rakshithgowdakv" target="_blank" className={custom.inheritColor}>
                    <AiFillTwitterCircle></AiFillTwitterCircle>
                </a>

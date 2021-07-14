@@ -90,5 +90,29 @@
     {
         display: none;
     }
+
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 750px) {
+
+
+    .primary{
+       
+        font-size: 1.5em;
+      
+    }
+    
+    .secondary{
+      
+        font-size: 1.5em;
+        
+    }
+    .subPrimary{
+        font-size: 1.1em;
+
+    }
+    .subSecondary{
+        font-size: 1.1em;
+    }
   }
 

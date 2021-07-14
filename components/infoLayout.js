@@ -12,13 +12,13 @@ const ReactTooltip = dynamic(() => import("react-tooltip"), {
     ssr: false,
   });
 
- 
+
 
 const InfoLayout = ({hamberger,toggelHamberger}) => {
- 
-    function calculate_age(dob) { 
+
+    function calculate_age(dob) {
         var diff_ms = Date.now() - dob.getTime();
-        var age_dt = new Date(diff_ms); 
+        var age_dt = new Date(diff_ms);
     //   console.log(Math.abs(age_dt.getUTCFullYear() - 1970))
         return Math.abs(age_dt.getUTCFullYear() - 1970);
     }
@@ -31,14 +31,14 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
     //             {
     //                 window.document.querySelector("#slideBar1").style.display = "block";
     //             }
-                
+
     //         }, 1000);
     //     }
     //     else{
     //         window.document.querySelector("#slideBar1").style.display = "none";
     //     }
 
-       
+
     // }, [hamberger])
     const info ={"Residence":"Mandya","City":"Mandya","Age":calculate_age(new Date(1996,5, 2))}
 
@@ -50,7 +50,7 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
     const knowledges =["Git","Git Bash","Figma","Tortoise Git","SVN","JIRA","POSTMAN","WINSCP","Eclispe","Android Studio",
 "WordPress"]
 
-    return (  
+    return (
         <div className={`${custom.darkBackground}`}>
             <style jsx>
                 {
@@ -63,44 +63,61 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
                         .afterskill{
                             margin-top:0rem !important;
                         }
-                        
-                        
+                        .sideImage{
+                          width:100px;
+                          height:100px;
+                        }
+                        .tagname{
+                            font-size: 1.5em;
+                        }
+
+                        .skillfont{
+                            font-size:.8rem;
+                        }
+
+                        .checklistIcon{
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .knowledge{
+                            font-size:1.5em;
+                        }
                       }
 
                     `
                 }
 
             </style>
-        
-            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`} style={{zIndex:2}}> 
+
+            <div className={`${style.avatarDiv} ${custom.border} ${""} ${"shadow rounded"}`} style={{zIndex:2}}>
             <Tween ease="Back.easeIn" from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={.5}>
 
-            <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger} 
-            
+            <VscClose id="slideBar1" className={`${style.hambergerclose}`} onClick={toggelHamberger}
+
             ></VscClose>
             <div className="d-flex flex-column justify-content-center align-content-center">
                <div className = {`${style.flex}`}>
                <div className={custom.mt8+ " d-flex justify-content-center p-2"}>
-                <Image src="/index.png" className={style.infoImage} width={80} height={80} alt="rakshithgowdakv"></Image> 
-                  
+                <Image src="/index.png" id="sideImage" className={style.infoImage} width={80} height={80} alt="rakshithgowdakv"></Image>
+
                 </div>
-         
+
                 <div data-tip data-for="statusforwork" className={`${custom.readytoWork} ${style.status}`}></div>
                </div>
                 <ReactTooltip  id="statusforwork" delay-show='1000' type="dark" place="right" effect="float">
         I'm available to work
       </ReactTooltip>
-                
-    			
+
+
 		<div className={style.primary+" text-center p-2"}>
 		Rakshithgowda KV
-		</div>    
+		</div>
             <div className={style.secondary+" text-center p-2"}>
-        Front-end Developer 
-            </div>         
-            </div>  
+        Front-end Developer
+            </div>
+            </div>
             </Tween>
-            
+
             </div>
 
             {/* *** Begging of location info  */}
@@ -118,21 +135,21 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
                         <div className="d-flex justify-content-between">
                         <div className={style.subPrimary}>
                             <span>{e}: </span>
-    
+
                             </div>
                             <div className={style.subSecondary}>
                         <span>
                         {info[e]}
                         </span>
-                                
+
                             </div>
-                 </div>     
+                 </div>
                         </li>
                        )
                     })
               }
                 </Tween>
-                    
+
                 </ul>
                 <div className={custom.divider}>
             </div>
@@ -141,7 +158,7 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 
             {/* skill start */}
             <div className={custom.border +"  p-4"}>
-                <h5 className={`${custom.poppinfont} ${custom.b} ${custom.mb1} ${custom.border} ${"mb-3"}`}>Skill</h5>
+                <h5 className={`${custom.poppinfont} ${custom.b} ${custom.mb1} ${custom.border} ${"mb-3 tagname"}`}>Skill</h5>
                 <div className={`${custom.border} ${"row"}`}>
                 <Tween ease="Back.easeIn" stagger={0.5}  from={{opacity:0,x: '-20px'}} to={{opacity:1,x: '0px'}} duration={1}>
 
@@ -151,23 +168,23 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 
                     <div  className="col-sm-4 d-flex justify-content-center skills">
 
-                    <span className={`${"badge m-1 text-dark"} ${custom.badgePill} ${custom.yellow}`}>{skill}</span>
+                    <span className={`${"badge m-1 text-dark skillfont"} ${custom.badgePill} ${custom.yellow}`}>{skill}</span>
                     </div>
                         )
                     })
                 }
-                    
+
                   </Tween>
                 </div>
                 <div className={`${custom.divider} ${"mt-4 afterskill"}`}>
-            </div>       
+            </div>
 </div>
 
 {/* skill end */}
 
 {/* Start knowledge */}
 <div className={custom.border +"  p-4"}>
-<h5 className={`${custom.poppinfont} ${custom.b} ${custom.mb1} ${custom.border} ${"mb-3"}`}>Knowledge</h5>
+<h5 className={`${custom.poppinfont} ${custom.b} ${custom.mb1} ${custom.border} ${"mb-3 tagname"}`}>Knowledge</h5>
 
 <div className={`${custom.textSecondary}`}>
 
@@ -177,31 +194,31 @@ const InfoLayout = ({hamberger,toggelHamberger}) => {
 {knowledges.map(knowledge=>{
     return(
 <li className={`${custom.fontSize13}`} key={knowledge}>
-<svg xmlns="http://www.w3.org/2000/svg" color="rgb(255, 200, 21)" width="20" height="20" fill="currentColor" className="bi bi-check" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" color="rgb(255, 200, 21)" width="20" height="20" fill="currentColor" className="bi bi-check checklistIcon" viewBox="0 0 16 16">
   <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
 </svg>
-    <span className="m-1">{knowledge}</span>
+    <span className="m-1 knowledge">{knowledge}</span>
 </li>
     )
 })}
 </Tween>
 </ul>
 
-    
+
 </div>
 
 </div>
            {/* End knowledge */}
-      
+
       {/* Start social media */}
       <div className={`${style.footerStyle}`}>
       <SocialMediaIcon>
-          
+
           </SocialMediaIcon>
       </div>
 {/* End social media */}
         </div>
     );
 }
- 
+
 export default InfoLayout;
